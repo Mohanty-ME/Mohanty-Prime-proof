@@ -1,10 +1,6 @@
-
-Title: Mohanty Prime Proof: A Deterministic and Efficient Algorithm for Primality Testing 
-Author: Sachin Mohanty 
-Abstract: This paper introduces a novel deterministic algorithm for verifying the primality of natural numbers with 100% accuracy and significantly fewer computational steps than existing methods. Unlike probabilistic tests like Miller-Rabin or Fermat’s theorem, and deterministic tests like AKS or trial division, the proposed method achieves primality confirmation for large numbers—such as the 1,000,000th prime—in fewer than 340 
-steps. This method provides a practical and scalable solution for use in cryptography and computational number theory.
-1. Introduction Primality testing is a fundamental operation in number theory and cryptography. Current methods can be broadly divided into two categories: deterministic (e.g., trial division, AKS) and probabilistic (e.g., Miller-Rabin, Fermat’s theorem). While probabilistic methods are fast, they cannot guarantee absolute certainty. Deterministic methods, while accurate, often suffer from high computational cost. This paper presents an algorithm—Mohanty Prime Proof—that maintains 100% accuracy with remarkable step reduction.
-2.  2. Methodology Let N be the number to be tested for primality. Step 1: Check if N = 2. • If yes, return "prime". • If no, check if N is divisible by 2. • If divisible, return "not prime". Step 2: Let P be the next prime number, starting from3.
+#mohanty-prime-proof
+Methodology Let N be the number to be tested for primality. Step 1: Check if N = 2. • If yes, return "prime". • If no, check if N is divisible by 2. • If divisible, return "not prime".
+Step 2: Let P be the next prime number, starting from 3.
  Step 3: For each prime P: • Compute B = N / P • If N % P == 0, return "not prime" • If B < P, stop and return "prime
 Step 4: Repeat until one of the two conditions in Step 3 is met.
 
